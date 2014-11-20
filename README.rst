@@ -33,9 +33,16 @@ Command Line
 
     $ snorse snowman
     ☃ ☃ ☃   ⛄⛄⛄ ☃   ⛄⛄⛄ ⛄⛄⛄ ⛄⛄⛄   ☃ ⛄⛄⛄ ⛄⛄⛄   ⛄⛄⛄ ⛄⛄⛄   ☃ ⛄⛄⛄   ⛄⛄⛄ ☃
+    $ cat snowman | snorse
+    ☃ ☃ ☃   ⛄⛄⛄ ☃   ⛄⛄⛄ ⛄⛄⛄ ⛄⛄⛄   ☃ ⛄⛄⛄ ⛄⛄⛄   ⛄⛄⛄ ⛄⛄⛄   ☃ ⛄⛄⛄   ⛄⛄⛄ ☃
+    $ echo snowman > snowman.txt
+    $ snorse snowman.txt
+    ☃ ☃ ☃   ⛄⛄⛄ ☃   ⛄⛄⛄ ⛄⛄⛄ ⛄⛄⛄   ☃ ⛄⛄⛄ ⛄⛄⛄   ⛄⛄⛄ ⛄⛄⛄   ☃ ⛄⛄⛄   ⛄⛄⛄ ☃
+    $ snorse -f snowman.txt
+    ☃ ☃ ☃   ⛄⛄⛄ ☃   ⛄⛄⛄ ⛄⛄⛄ ⛄⛄⛄   ☃ ⛄⛄⛄ ⛄⛄⛄   ⛄⛄⛄ ⛄⛄⛄   ☃ ⛄⛄⛄   ⛄⛄⛄ ☃
+    
 
-
-Python
+Python API
 
 .. code-block:: python
 

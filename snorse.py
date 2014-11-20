@@ -1,5 +1,7 @@
 from __future__ import unicode_literals
 
+import os
+
 import click
 
 
@@ -63,6 +65,13 @@ def snorse(text):
 
 
 @click.command()
-@click.argument('text')
-def cli(text):
+@click.argument('text', required=False)
+@click.option('-f', '--file', type=click.File())
+def cli(text=None, file=None):
+    if file is not None:
+        text = file.read()
+    elif text is None:
+        text = click.get_text_stream('stdin').read()
+    elif os.path.exists(os.path.expanduser(text)):
+        text = open(os.path.expanduser(text)).read()
     click.echo(snorse(text))
