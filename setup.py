@@ -13,7 +13,7 @@ history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 setup(
     name='snorse',
-    version='0.1.0',
+    version='0.2.0',
     description='Unicode Snowman Morse Code',
     long_description=readme + '\n\n' + history,
     author='Piper Merriam',
