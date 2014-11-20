@@ -20,7 +20,8 @@ Unicode Snowman Morse Code
 Install
 -------
 
-.. code:: bash
+.. code-block:: bash
+
     $ pip install snorse
 
 Usage
@@ -28,14 +29,16 @@ Usage
 
 Command Line
 
-.. code:: bash
+.. code-block:: bash
+
     $ snorse snowman
     ☃ ☃ ☃   ⛄⛄⛄ ☃   ⛄⛄⛄ ⛄⛄⛄ ⛄⛄⛄   ☃ ⛄⛄⛄ ⛄⛄⛄   ⛄⛄⛄ ⛄⛄⛄   ☃ ⛄⛄⛄   ⛄⛄⛄ ☃
 
 
 Python
 
-.. code:: python
+.. code-block:: python
+
     >>> import snorse
     >>> snorse.snorse('snowman')
     u'\u2603 \u2603 \u2603   \u26c4\u26c4\u26c4 \u2603   \u26c4\u26c4\u26c4 \u26c4\u26c4\u26c4 \u26c4\u26c4\u26c4   \u2603 \u26c4\u26c4\u26c4 \u26c4\u26c4\u26c4   \u26c4\u26c4\u26c4 \u26c4\u26c4\u26c4   \u2603 \u26c4\u26c4\u26c4   \u26c4\u26c4\u26c4 \u2603'
