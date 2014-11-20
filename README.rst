@@ -21,7 +21,7 @@ Install
 -------
 
 .. code:: bash
-   $ pip install snorse
+    $ pip install snorse
 
 Usage
 -----
@@ -29,18 +29,18 @@ Usage
 Command Line
 
 .. code:: bash
-   $ snorse snowman
-   ☃ ☃ ☃   ⛄⛄⛄ ☃   ⛄⛄⛄ ⛄⛄⛄ ⛄⛄⛄   ☃ ⛄⛄⛄ ⛄⛄⛄   ⛄⛄⛄ ⛄⛄⛄   ☃ ⛄⛄⛄   ⛄⛄⛄ ☃
+    $ snorse snowman
+    ☃ ☃ ☃   ⛄⛄⛄ ☃   ⛄⛄⛄ ⛄⛄⛄ ⛄⛄⛄   ☃ ⛄⛄⛄ ⛄⛄⛄   ⛄⛄⛄ ⛄⛄⛄   ☃ ⛄⛄⛄   ⛄⛄⛄ ☃
 
 
 Python
 
 .. code:: python
-   >>> import snorse
-   >>> snorse.snorse('snowman')
-   u'\u2603 \u2603 \u2603   \u26c4\u26c4\u26c4 \u2603   \u26c4\u26c4\u26c4 \u26c4\u26c4\u26c4 \u26c4\u26c4\u26c4   \u2603 \u26c4\u26c4\u26c4 \u26c4\u26c4\u26c4   \u26c4\u26c4\u26c4 \u26c4\u26c4\u26c4   \u2603 \u26c4\u26c4\u26c4   \u26c4\u26c4\u26c4 \u2603'
-   >>> print snors.snorse('snowman')
-   ☃ ☃ ☃   ⛄⛄⛄ ☃   ⛄⛄⛄ ⛄⛄⛄ ⛄⛄⛄   ☃ ⛄⛄⛄ ⛄⛄⛄   ⛄⛄⛄ ⛄⛄⛄   ☃ ⛄⛄⛄   ⛄⛄⛄ ☃
+    >>> import snorse
+    >>> snorse.snorse('snowman')
+    u'\u2603 \u2603 \u2603   \u26c4\u26c4\u26c4 \u2603   \u26c4\u26c4\u26c4 \u26c4\u26c4\u26c4 \u26c4\u26c4\u26c4   \u2603 \u26c4\u26c4\u26c4 \u26c4\u26c4\u26c4   \u26c4\u26c4\u26c4 \u26c4\u26c4\u26c4   \u2603 \u26c4\u26c4\u26c4   \u26c4\u26c4\u26c4 \u2603'
+    >>> print snors.snorse('snowman')
+    ☃ ☃ ☃   ⛄⛄⛄ ☃   ⛄⛄⛄ ⛄⛄⛄ ⛄⛄⛄   ☃ ⛄⛄⛄ ⛄⛄⛄   ⛄⛄⛄ ⛄⛄⛄   ☃ ⛄⛄⛄   ⛄⛄⛄ ☃
 
 
 Profit!
