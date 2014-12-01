@@ -48,18 +48,41 @@ MORSE = {
     '0': (DASH, DASH, DASH, DASH, DASH),
 }
 
+UNMORSE = {v: k for k, v in MORSE.items()}
+
+
+LETTER_SPACING = '   '
+CHARACTER_SPACING = ' '
+WORD_SPACING = '       '
+
 
 def word_to_morse(word):
-    return '   '.join(map(
-        lambda c: ' '.join(MORSE.get(c.lower(), [c])),
+    return LETTER_SPACING.join(map(
+        lambda c: CHARACTER_SPACING.join(MORSE.get(c.lower(), [c])),
         word,
     ))
 
 
 def snorse(text):
     words = filter(bool, text.split(' '))
-    return '       '.join(map(
+    return WORD_SPACING.join(map(
         word_to_morse,
+        words,
+    ))
+
+
+def morse_to_word(morse):
+    letters = morse.split(LETTER_SPACING)
+    return ''.join(map(
+        lambda c: UNMORSE.get(tuple(c.split(CHARACTER_SPACING)), c),
+        letters,
+    ))
+
+
+def desnorse(text):
+    words = filter(bool, text.split(WORD_SPACING))
+    return ' '.join(map(
+        morse_to_word,
         words,
     ))
 
@@ -67,7 +90,7 @@ def snorse(text):
 @click.command()
 @click.argument('text', required=False)
 @click.option('-f', '--file', type=click.File())
-def cli(text=None, file=None):
+def snorse_cli(text=None, file=None):
     if file is not None:
         text = file.read()
     elif text is None:
@@ -75,3 +98,16 @@ def cli(text=None, file=None):
     elif os.path.exists(os.path.expanduser(text)):
         text = open(os.path.expanduser(text)).read()
     click.echo(snorse(text))
+
+
+@click.command()
+@click.argument('text', required=False)
+@click.option('-f', '--file', type=click.File())
+def desnorse_cli(text=None, file=None):
+    if file is not None:
+        text = file.read()
+    elif text is None:
+        text = click.get_text_stream('stdin').read()
+    elif os.path.exists(os.path.expanduser(text)):
+        text = open(os.path.expanduser(text)).read()
+    click.echo(desnorse(text))

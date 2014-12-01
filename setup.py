@@ -23,7 +23,10 @@ setup(
         'snorse',
     ],
     entry_points={
-        'console_scripts': ["snorse=snorse:cli"],
+        'console_scripts': [
+            "snorse=snorse:snorse_cli",
+            "desnorse=snorse:desnorse_cli",
+        ],
     },
     install_requires=['click==3.3'],
     include_package_data=True,
