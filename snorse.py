@@ -48,7 +48,9 @@ MORSE = {
     '0': (DASH, DASH, DASH, DASH, DASH),
 }
 
-UNMORSE = {v: k for k, v in MORSE.items()}
+UNMORSE = dict(
+    (v, k) for k, v in MORSE.items()
+)
 
 
 LETTER_SPACING = '   '
